@@ -1,0 +1,22 @@
+@import "../variables";
+.intro {
+  background-image: url(../../assets/intro/img_intro_bg.jpg);
+  .fp-tableCell {
+    @extend .static-center;
+    .content {
+      max-width: 540px;
+      text-align: center;
+      .title {
+        color: #fff;
+        opacity: 0.6;
+        letter-spacing: 5px;
+        font-size: 18px;
+        margin-top: 120px;
+        text-shadow: 0 0 10px #28a1ff;
+      }
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+}
