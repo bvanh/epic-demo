@@ -22,5 +22,11 @@ body {
   h5 {
     margin: 0;
   }
+  button {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+  }
 }
 </style>

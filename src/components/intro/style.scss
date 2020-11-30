@@ -1,22 +1,91 @@
 @import "../variables";
 .intro {
+  position: relative;
   background-image: url(../../assets/intro/img_intro_bg.jpg);
+  background-size: cover;
   .fp-tableCell {
     @extend .static-center;
     .content {
       max-width: 540px;
       text-align: center;
+      position: relative;
       .title {
         color: #fff;
         opacity: 0.6;
         letter-spacing: 5px;
         font-size: 18px;
-        margin-top: 120px;
+        margin-top: 75px;
         text-shadow: 0 0 10px #28a1ff;
       }
       .logo {
         width: 100%;
       }
+      .btn-video {
+        width: 450px;
+        height: 120px;
+        line-height: 118px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-image: url(../../assets/intro/img_btn_video.png);
+        background-position: center;
+        background-size: 100% auto;
+        margin-top: 0;
+        h4 {
+          color: #ccc;
+          letter-spacing: 2px;
+          font-size: 16px;
+          padding-right: 5px;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .download-box {
+        @extend .static-center;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        a img {
+          height: 60px;
+          width: auto;
+        }
+      }
+      .scroll-down {
+        cursor: pointer;
+        position: absolute;
+        bottom: -8rem;
+        left: 44%;
+        //transform: translateX(-50%);
+        transform-origin: 50% 50% 0px;
+        animation: scroll-down 2s ease 0s infinite normal none running;
+      }
     }
+    .character-display {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      div {
+        transition: all 1s;
+      }
+      .char-1 {
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        left: -15%;
+        background: transparent url(../../assets/intro/character_main_3.png)
+          no-repeat;
+        background-size: cover;
+      }
+      .char-2{
+        
+      }
+    }
+  }
+}
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(25px);
   }
 }
