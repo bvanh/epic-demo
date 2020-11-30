@@ -17,6 +17,7 @@
     <div class="character-display">
       <div class="char-1"></div>
       <div class="char-2"></div>
+      <img class="effect-1" :src="importImg('effect2.png')" />
     </div>
   </div>
 </template>

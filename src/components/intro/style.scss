@@ -5,10 +5,11 @@
   background-size: cover;
   .fp-tableCell {
     @extend .static-center;
+    
     .content {
       max-width: 540px;
       text-align: center;
-      position: relative;
+      position: absolute;
       .title {
         color: #fff;
         opacity: 0.6;
@@ -65,18 +66,30 @@
       left: 0;
       div {
         transition: all 1s;
+        position: absolute;
+        z-index: 3;
       }
       .char-1 {
-        width: 60%;
+        width: 43%;
         height: 100%;
-        position: absolute;
-        left: -15%;
-        background: transparent url(../../assets/intro/character_main_3.png)
-          no-repeat;
-        background-size: cover;
+        left: 0;
+        background: transparent url(../../assets/intro/character_main_1.png)
+          no-repeat bottom right;
+        background-size: auto 90%;
       }
-      .char-2{
-        
+      .char-2 {
+        width: 38%;
+        height: 100%;
+        bottom: 0;
+        right:0;
+        background: transparent url(../../assets/intro/character_main_2.png)
+          no-repeat bottom left;
+        background-size: auto 90%;
+      }
+      .effect-1{
+       position: absolute;
+       bottom: 0;
+       z-index: 3;
       }
     }
   }

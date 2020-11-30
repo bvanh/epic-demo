@@ -9,4 +9,7 @@ function importAll(r) {
 const imgIntro = importAll(
   require.context("../assets/intro", false, /\.(png|jpe?g|svg)$/)
 );
-export { imgIntro };
+const imgBg = importAll(
+  require.context("../assets/bg", false, /\.(png|jpe?g|svg)$/)
+);
+export { imgIntro, imgBg };
