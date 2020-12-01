@@ -1,6 +1,6 @@
 <template>
   <div class="section intro">
-    <div class="content">
+    <div class="content-intro">
       <h5 class="title">EPIC SOULS GRAND OPEN</h5>
       <img :src="importImg('img_logo_game.png')" class="logo" />
       <button class="btn-video">

@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :style="getBackground(bg)">
+  <div class="container">
     <!-- <ul id="menu">
       <li data-menuanchor="intro"><a href="#intro">Page 1</a></li>
       <li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
@@ -7,7 +7,7 @@
     </ul> -->
     <full-page :options="options" id="fullpage">
       <Intro />
-      <div class="section">Second section ...</div>
+      <Story />
       <div class="section">Third section ...</div>
     </full-page>
   </div>
@@ -15,51 +15,43 @@
 
 <script>
 import Intro from "./intro/Intro";
-import { imgBg } from "../ultils/importImg";
+import Story from "./story/Story";
+//import { imgBg } from "../ultils/importImg";
 export default {
   name: "Home",
   data: () => ({
     bg: 1,
     options: {
-      afterLoad: function (origin, destination) {
-        //       console.log("After load....");
-        const { anchor } = destination;
-
-        switch (anchor) {
-          case "page2":
-            this.bg = 2;
-            break;
-          default:
-            break;
-        }
-        console.log(anchor, this.bg);
-        console.log(origin);
+      onLeave: function (index, nextIndex, direction) {
+        console.log(index, direction, nextIndex);
+        // this.bg = 2;
       },
       menu: "#menu",
       responsiveWidth: 900,
       // navigation: true,
-      anchors: ["intro", "page2", "page3"],
+      anchors: ["intro", "story", "page3"],
       //  sectionsColor: ["#41b883", "#ff5f45", "#0798ec"],
     },
   }),
   methods: {
-    getBackground(url) {
-      return `background-image: url(${imgBg["bg" + url + ".png"]})`;
-    },
+    // getBackground(url) {
+    //   return `background-image: url(${imgBg["bg" + url + ".png"]})`;
+    // },
   },
   components: {
     Intro,
+    Story,
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.fullpage-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+<style>
+body {
+  background: black url(../assets/bg/bg1.png) no-repeat top;
+  transition: all 0.6s;
+}
+.fp-viewing-story {
+  background: black url(../assets/bg/bg2.png) no-repeat top;
 }
 </style>
