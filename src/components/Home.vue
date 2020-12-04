@@ -8,6 +8,8 @@
     <full-page :options="options" id="fullpage">
       <Intro />
       <Story />
+      <Story2 />
+      <Info />
       <div class="section">Third section ...</div>
     </full-page>
   </div>
@@ -16,6 +18,8 @@
 <script>
 import Intro from "./intro/Intro";
 import Story from "./story/Story";
+import Story2 from "./story/Story2";
+import Info from "./info/Info";
 //import { imgBg } from "../ultils/importImg";
 export default {
   name: "Home",
@@ -29,7 +33,7 @@ export default {
       menu: "#menu",
       responsiveWidth: 900,
       // navigation: true,
-      anchors: ["intro", "story", "page3"],
+      anchors: ["intro", "story", "story2","info", "page3"],
       //  sectionsColor: ["#41b883", "#ff5f45", "#0798ec"],
     },
   }),
@@ -41,6 +45,8 @@ export default {
   components: {
     Intro,
     Story,
+    Story2,
+    Info,
   },
 };
 </script>
@@ -53,5 +59,8 @@ body {
 }
 .fp-viewing-story {
   background: black url(../assets/bg/bg2.png) no-repeat top;
+}
+.fp-viewing-info {
+  background: black url(../assets/bg/img_info_bg.png) no-repeat top;
 }
 </style>
