@@ -12,4 +12,7 @@ const imgIntro = importAll(
 const imgBg = importAll(
   require.context("../assets/bg", false, /\.(png|jpe?g|svg)$/)
 );
-export { imgIntro, imgBg };
+const imgInfoBg = importAll(
+  require.context("../assets/info", false, /\.(png|jpe?g|svg)$/)
+);
+export { imgIntro, imgBg, imgInfoBg };
